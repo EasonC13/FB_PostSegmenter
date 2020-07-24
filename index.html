@@ -38,9 +38,10 @@
                 document.getElementById("title").innerHTML = TITLE + "  (Pending)"
                 var text = document.getElementById("target").value;
                 var nextLine = String.fromCharCode(10);
-                var 全型空白 = String.fromCharCode(12288)
+                var 全型空白 = String.fromCharCode(12288);
+                var 特殊空白 = String.fromCharCode(65279);
                 console.log(text);
-                text = replaceAll(text, nextLine+nextLine, nextLine+全型空白+nextLine)
+                text = replaceAll(text, nextLine+nextLine, nextLine+特殊空白+nextLine)
                 document.getElementById("target").value = text;
 
 
@@ -132,7 +133,7 @@
         <p>結果就是文章的段落擠在一起，較不容易閱讀<br>這件事，對好文章來說，是非常可惜的事情</p>
         <p>因此，我稍微改了一下之前做的 <a href="https://easonc13.github.io/WordCommenter/" target="_blank">Ｗord-Commenter</a> 原始碼，<br>
         然後，「臉書貼文分段者」就誕生了！</p>
-        <p>透過在換行處加上全型空白<br>讓你的段落間距放大，達到真正的換行</p>
+        <p>透過在換行處加上特殊空白<br>讓你的段落間距放大，達到真正的換行</p>
         <p>本服務完全使用前端 JavaScript 運行，可在無網路環境使用。</p>
         <br>
         <h2 id="tutorial">如何使用？</h2>
