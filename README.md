@@ -1,6 +1,6 @@
-# 臉書貼文換行神器 Facebook Change Liner 
+# 臉書貼文分段者 FB Post Segmenter
 
-[網頁請點我](https://easonc13.github.io/FBchangeLiner/)
+[網頁請點我](https://easonc13.github.io/FB_PostSegmenter)
 
 ## 創作源起
 因為我注意到很多人的中文臉書貼文
@@ -14,7 +14,7 @@
 但這樣的行距，並不適合中文讀者
 
 因此，我稍微改了一下之前做的 [Ｗord-Commenter](https://easonc13.github.io/WordCommenter/) 的原始碼
-「FB changeLiner 臉書換行者」就這樣誕生了！
+「FB Post Segmenter 臉書換行者」就這樣誕生了！
 
 本服務完全使用前端 JavaScript 運行，可在無網路環境使用。
 
@@ -28,6 +28,7 @@
 5. 分享給朋友知道這個好工具
 
 ## 關於作者
+
 作者：陳怡升 EasonC13
 
 現在就讀臺師大，學習科學學士班三年級。
