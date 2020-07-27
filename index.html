@@ -41,7 +41,7 @@
                 var 全型空白 = String.fromCharCode(12288);
                 var 特殊空白 = String.fromCharCode(65279);
                 console.log(text);
-                text = replaceAll(text, nextLine+nextLine, nextLine+特殊空白+nextLine)
+                text = replaceAll(text, nextLine+nextLine, nextLine+全型空白+nextLine)
                 document.getElementById("target").value = text;
 
 
