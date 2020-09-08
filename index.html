@@ -76,8 +76,13 @@
 
             window.onload = function(){
                 target = $('#target');
-                target.css('color','gray');
-                target.val('請貼上你的貼文')
+                
+                // if(target.val()==""){
+                //     target.css('color','gray');
+                //     target.val('請貼上你的貼文')
+                // }
+
+                focus(target)
 
                 var target = document.getElementById("target");
     
@@ -94,7 +99,7 @@
             </script>
     <div class="info" style="text-align: left; margin-left: 2%;margin-right: 2%;margin-top:2%;background-color: white;">
         
-    <textarea id="target" style='height:80%;width:98%;margin:auto;font-size:150%;text-align: cetner;display:block;' onfocus="if(this.value == '請貼上你的貼文'){this.value = '';};$('#'+this.id).css('color','black');" type="text" onblur="if(this.value == ''){this.value='請貼上你的貼文';$('#'+this.id).css('color','gray');}"></textarea>
+    <textarea id="target" style='height:80%;width:98%;margin:auto;font-size:150%;text-align: cetner;display:block;' onfocus="if(this.value == '請貼上你的貼文'){this.value = '';};$('#'+this.id).css('color','black');" type="text" onblur="if(this.value == ''){this.value='請貼上你的貼文';$('#'+this.id).css('color','gray');}" autofocus></textarea>
     <div style="text-align: center;">
     <div class="tooltip copy">
         <span class="tooltiptext" id="myTooltip">按下以開始</span>
