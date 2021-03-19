@@ -55,6 +55,13 @@
                 $("#doCopy").css('background-color', 'orange')
                 setTimeout(() => { $("#doCopy").css('background-color', '')}, 10000);
             }
+
+            function retreat() {
+                var 超級特殊空白 = String.fromCharCode(8203);
+                var text = document.getElementById("target").value;
+                text = replaceAll(text, 超級特殊空白, "")
+                document.getElementById("target").value = text;
+            }
             
             function copy() {
                 $("#doCopy").css('background-color', '')
@@ -99,7 +106,7 @@
             </script>
     <div class="info" style="text-align: left; margin-left: 2%;margin-right: 2%;margin-top:2%;background-color: white;">
         
-    <textarea id="target" style='height:80%;width:98%;margin:auto;font-size:150%;text-align: cetner;display:block;' onfocus="if(this.value == '請貼上你的貼文'){this.value = '';};$('#'+this.id).css('color','black');" type="text" onblur="if(this.value == ''){this.value='請貼上你的貼文';$('#'+this.id).css('color','gray');}" autofocus></textarea>
+    <textarea id="target" style='height:75%;width:98%;margin:auto;font-size:150%;text-align: cetner;display:block;' onfocus="if(this.value == '請貼上你的貼文'){this.value = '';};$('#'+this.id).css('color','black');" type="text" onblur="if(this.value == ''){this.value='請貼上你的貼文';$('#'+this.id).css('color','gray');}" autofocus></textarea>
     <div style="text-align: center;">
     <div class="tooltip copy">
         <span class="tooltiptext" id="myTooltip">按下以開始</span>
@@ -109,6 +116,12 @@
         <span class="tooltiptext" id="myTooltipCopy">複製至剪貼簿</span>
         <button id='doCopy' style='margin:auto;' onclick="copy()" class="w3-button w3-border w3-light-grey w3-left w3-mobile">
             複製
+            </button>
+    </div>
+    <div class="tooltip" id="copy">
+        <span class="tooltiptext" id="myTooltipCopy">移除分段</span>
+        <button id='doCopy' style='margin:auto;' onclick="retreat()" class="w3-button w3-border w3-light-grey w3-left w3-mobile">
+            還原
             </button>
     </div>
 
